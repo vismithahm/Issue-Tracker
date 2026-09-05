@@ -101,11 +101,6 @@ From the server directory:
 
 npm run dev
 
-- The backend runs on:
-
-http://localhost:5000
-Start the frontend
-
 - From the client directory:
 
 1.npm run dev
