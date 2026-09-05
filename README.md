@@ -76,67 +76,53 @@ Web_App/
 ├── .env.example
 ├── .gitignore
 └── README.md
-
-Setup and Installation
-Prerequisites
-Node.js
-npm
-MongoDB
+```
+## Setup and Installation
+### Prerequisites
+- Node.js
+- npm
+- MongoDB
 1. Install frontend dependencies
 cd client
 npm install
 2. Install backend dependencies
 
-Open another terminal:
+- Open another terminal:
 
 cd server
 npm install
 3. Configure environment variables
 
 Create a file named .env inside the server folder.
-
-MONGO_URI=mongodb://localhost:27017/rushdr
-PORT=5000
-
-An .env.example file is provided in the project as a reference.
-
-The actual .env file should not be committed to GitHub.
-
-Running the Application
-Start the backend
+- Running the Application
+- Start the backend
 
 From the server directory:
 
 npm run dev
 
-The backend runs on:
+- The backend runs on:
 
 http://localhost:5000
 Start the frontend
 
-From the client directory:
+- From the client directory:
 
-npm run dev
+1.npm run dev
 
-Open the localhost URL provided by Vite in your browser.
+2.Open the localhost URL provided by Vite in your browser.
 
-Seed Data
+3.Seed Data
 
-The project includes seed data for testing the application.
+4.The project includes seed data for testing the application.
 
-From the server directory:
+- From the server directory:
 
 npx tsx src/seed.ts
 
 This populates the MongoDB rushdr database with sample issues.
 
 API Documentation
-
-Base URL:
-
-http://localhost:5000/api/issues
-Get all issues
-GET /api/issues
 
 Supports search and filtering by title, status, priority, and assignee.
 
@@ -148,7 +134,7 @@ GET /api/issues/:id
 Create an issue
 POST /api/issues
 
-Example request:
+## Example request:
 
 {
   "title": "Fix login issue",
@@ -164,7 +150,7 @@ DELETE /api/issues/:id
 
 The API validates incoming data and handles invalid or nonexistent issue IDs with appropriate error responses.
 
-Data Model
+## Data Model
 
 Each issue contains:
 
@@ -178,7 +164,7 @@ updatedAt
 
 The createdAt and updatedAt fields are automatically managed using Mongoose timestamps.
 
-Validation
+## Validation
 Frontend Validation
 
 The frontend validates required fields before submitting the form.
@@ -189,7 +175,7 @@ Backend Validation
 
 The backend also validates incoming requests to ensure invalid data cannot bypass frontend validation.
 
-Testing
+## Testing
 Backend Tests
 
 Backend tests cover:
@@ -198,7 +184,7 @@ Creating a valid issue
 Rejecting an invalid issue
 Fetching issues
 
-Run:
+- Run:
 
 cd server
 npm test
@@ -206,7 +192,7 @@ Frontend Tests
 
 Frontend testing covers an important IssueForm validation interaction.
 
-Run:
+- Run:
 
 cd client
 npm test
@@ -215,42 +201,24 @@ React and TypeScript
 
 TypeScript provides type safety for issue data, component props, API responses, statuses, and priorities.
 
-REST API
+## REST API
 
 The frontend communicates with the backend using REST endpoints, keeping the frontend and backend responsibilities separated.
 
-MongoDB and Mongoose
+## MongoDB and Mongoose
 
 MongoDB is used for persistent issue storage, while Mongoose provides schema validation and automatic timestamp management.
 
-Component-Based UI
+## Component-Based UI
 
 The frontend is organized into reusable components such as IssueCard and IssueForm, with Dashboard managing the main issue workflow.
 
-Combined Filtering
+## Combined Filtering
 
 Search and filters can be used together so users can efficiently narrow down the issue list.
 
-Tailwind CSS
+## Tailwind CSS
 
 Tailwind CSS is used to create a responsive and maintainable user interface for both desktop and mobile screens.
 
-What I Would Improve With More Time
 
-With additional development time, I would consider:
-
-Pagination for larger issue lists
-Sorting by date and priority
-Drag-and-drop status management
-Debounced search
-Optimistic UI updates
-Docker support
-More extensive test coverage
-Deployment of the frontend and backend
-
-### GitHub repository description
-
-For your **`webap` repository Description**, paste exactly:
-
-```text
-Full-stack Mini Issue Tracker built with React, TypeScript, Tailwind CSS, Node.js, Expre
