@@ -1,6 +1,5 @@
 # RUSHDR Mini Issue Tracker
 
-A full-stack Mini Issue Tracker developed for the RUSHDR Web Development Intern Assessment.
 
 The application allows users to create, view, update, delete, search, and filter issues through a responsive dashboard backed by a REST API and MongoDB.
 
